@@ -10,36 +10,33 @@ import {
 } 
 from 'react-native';
 
-import {createStackNavigator,createAppContainer} from 'react-navigation';
-import SignIn from './SignIn';
 import styles from './Styles';
 
 
 
-class App extends React.Component {
+export default class SignIn extends React.Component {
 
-
+    // static navigationOptions = {
+    //     title: 'Welcome',
+    //   };
 
     // constructor
 
     constructor(props) {
       super(props);
       this.state = {
-        first_name: '',
-        last_name: '',
         email_address: '',
         password: '',
 
       };
 
       
-   
-
       //bind to function(s)
       this.post = this.post.bind(this);
     }
   
     // constructor
+    
 
   post()
   {
@@ -90,9 +87,7 @@ class App extends React.Component {
         <Image
           source={require('./assets/science.png')}
         />
-        <Text       style={styles.h1}>Register</Text>
-        <TextInput  style={styles.input} placeholder={"First Name"} name="first_name" onChangeText={(first_name) => this.setState({first_name}) }/>
-        <TextInput  style={styles.input} placeholder={"Last Name"} name="last_name" onChangeText={(last_name) => this.setState({last_name}) }/>
+        <Text       style={styles.h1}>Sign In</Text>
         <TextInput  style={styles.input} placeholder={"Email Address"} name="email_address" onChangeText={(email_address) => this.setState({email_address}) }/>
         <TextInput  style={styles.input} placeholder={"Password"} secureTextEntry={true} name="last_name" onChangeText={(password) => this.setState({password}) }/>
         {/* button */}
@@ -115,7 +110,7 @@ class App extends React.Component {
         </View>
         {/* button */}
 
-        <Text style={styles.signin} onPress={() => this.props.navigation.navigate('SignIn')}>Sign In</Text>
+        <Text style={styles.signin} onPress={() => this.props.navigation.navigate('Home')}>Home</Text>
         
 
       </KeyboardAvoidingView>
@@ -125,12 +120,10 @@ class App extends React.Component {
   }
 }
 
-const AppNavigator = createStackNavigator({
-  Home: App,
-  SignIn: SignIn,
-});
 
-export default createAppContainer(AppNavigator);
+
+
+
 
 
 

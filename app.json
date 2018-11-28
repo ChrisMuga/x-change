@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icon": "./assets/science.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/science.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
