@@ -41,15 +41,13 @@ export default class SignIn extends React.Component {
   post()
   {
     // post to api
-    fetch('http://192.168.1.102:8000/api/register', {
+    fetch('http://192.168.1.102:8000/api/user-signin', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        first_name: this.state.first_name ,
-        last_name: this.state.last_name ,
         email_address: this.state.email_address ,
         password: this.state.password ,
       })
@@ -94,7 +92,7 @@ export default class SignIn extends React.Component {
         <View style={styles.full_view}>
           <TouchableOpacity  style={[styles.full_height, styles.btn, styles.btnprimary]} onPress={this.post}>
             <View style={styles.inline}>
-              <Text style={[styles.left, styles.font1]}>Sign Up</Text><Image source={require('./assets/right-arrow.png')} style={styles.right}/>
+              <Text style={[styles.left, styles.font1]}>Sign In</Text><Image source={require('./assets/right-arrow.png')} style={styles.right}/>
             </View>
           </TouchableOpacity>
         </View>
