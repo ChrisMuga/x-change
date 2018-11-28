@@ -80,7 +80,7 @@ export default class App extends React.Component {
         <View style={styles.full_view}>
           <TouchableOpacity  style={[styles.full_height, styles.btn, styles.btnprimary]} onPress={this.post}>
             <View style={styles.inline}>
-              <Text style={[styles.left, styles.font1]}>Sign In</Text><Image source={require('./assets/right-arrow.png')} style={styles.right}/>
+              <Text style={[styles.left, styles.font1]}>Sign Up</Text><Image source={require('./assets/right-arrow.png')} style={styles.right}/>
             </View>
           </TouchableOpacity>
         </View>
