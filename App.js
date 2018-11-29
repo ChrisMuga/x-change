@@ -12,7 +12,10 @@ from 'react-native';
 
 import {createStackNavigator,createAppContainer} from 'react-navigation';
 import SignIn from './SignIn';
+import Dashboard from './Dashboard';
 import styles from './Styles';
+
+
 
 
 
@@ -128,6 +131,7 @@ class App extends React.Component {
 const AppNavigator = createStackNavigator({
   Home: App,
   SignIn: SignIn,
+  Dashboard: Dashboard,
 });
 
 export default createAppContainer(AppNavigator);

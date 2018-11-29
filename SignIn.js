@@ -14,6 +14,9 @@ import styles from './Styles';
 
 
 
+
+
+
 export default class SignIn extends React.Component {
 
     // static navigationOptions = {
@@ -30,14 +33,15 @@ export default class SignIn extends React.Component {
 
       };
 
+    
       
       //bind to function(s)
       this.post = this.post.bind(this);
+  
     }
   
     // constructor
     
-
   post()
   {
     // post to api
@@ -57,11 +61,14 @@ export default class SignIn extends React.Component {
     })
     .then(function(data) {
       //console.log(JSON.stringify(myJson));
+
+      //success
       if(data.code==1)
       {
-        console.log(data.msg)
-        Alert.alert("X-CHANGE",String(data.msg))
-      }else if(data.code==0)
+        console.log(data.msg);
+        Alert.alert("X-CHANGE",String(data.msg));
+
+      }else if(data.code==0) //error
       {
         console.log(data.msg)
         Alert.alert("X-CHANGE",String(data.msg))
@@ -79,6 +86,7 @@ export default class SignIn extends React.Component {
 
 
   render() {
+   
     return (
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
@@ -108,7 +116,8 @@ export default class SignIn extends React.Component {
         </View>
         {/* button */}
 
-        <Text style={styles.signin} onPress={() => this.props.navigation.navigate('Home')}>Register</Text>
+        <Text style={styles.signin} onPress={()=>this.props.navigation.navigate('Home')}>Register</Text>
+        <Text style={styles.signin} onPress={()=>this.props.navigation.navigate('Dashboard')}>Dashboard</Text>
         
 
       </KeyboardAvoidingView>
