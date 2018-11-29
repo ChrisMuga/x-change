@@ -108,7 +108,7 @@ export default class SignIn extends React.Component {
         </View>
         {/* button */}
 
-        <Text style={styles.signin} onPress={() => this.props.navigation.navigate('Home')}>Home</Text>
+        <Text style={styles.signin} onPress={() => this.props.navigation.navigate('Home')}>Register</Text>
         
 
       </KeyboardAvoidingView>

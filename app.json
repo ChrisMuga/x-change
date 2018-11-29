@@ -10,7 +10,7 @@
     "orientation": "portrait",
     "icon": "./assets/science.png",
     "splash": {
-      "image": "./assets/science.png",
+      "image": "./assets/jurica.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
