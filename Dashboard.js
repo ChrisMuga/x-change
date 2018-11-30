@@ -10,6 +10,11 @@ import {
 } 
 from 'react-native';
 
+import { 
+  Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox 
+} 
+from 'react-native-router-flux';
+
 import styles from './Styles';
 
 
@@ -84,6 +89,7 @@ export default class Dashboard extends React.Component {
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
         <Text style={styles.h1}>DashBoard</Text>
+        <Text style={styles.h1}>{this.props.msg}</Text>
 
       </KeyboardAvoidingView>
 

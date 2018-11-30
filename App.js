@@ -15,7 +15,6 @@ import {
 } 
 from 'react-native-router-flux';
 
-import {createStackNavigator,createAppContainer} from 'react-navigation';
 import SignIn from './SignIn';
 import Dashboard from './Dashboard';
 import styles from './Styles';
@@ -74,6 +73,7 @@ class App extends React.Component {
       {
         console.log(data.msg)
         Alert.alert("X-CHANGE",String(data.msg))
+        
       }else if(data.code==0)
       {
         console.log(data.msg)
@@ -126,7 +126,7 @@ class App extends React.Component {
         </View>
         {/* button */}
 
-        <Text style={styles.signin} onPress={() => this.props.navigation.navigate('SignIn')}>Sign In</Text>
+        <Text style={styles.signin} onPress={()=>Actions.signin()}>Sign In</Text>
         
 
       </KeyboardAvoidingView>
@@ -136,24 +136,18 @@ class App extends React.Component {
   }
 }
 
-const AppNavigator = createStackNavigator({
-  Home: App,
-  SignIn: SignIn,
-  Dashboard: Dashboard,
-});
 
 const Routes = () =>(
 
   <Router>
   <Stack key="root">
+    <Scene key="register" component={App} title="Home"/>
     <Scene key="signin" component={SignIn} title="SignIn"/>
-    <Scene key="home" component={App} title="Home"/>
     <Scene key="dashboard" component={Dashboard} title="Dashboard"/>
   </Stack>
 </Router>
 );
 
-// export default createAppContainer(AppNavigator);
 
 export default Routes
 
