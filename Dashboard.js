@@ -91,17 +91,58 @@ export default class Dashboard extends React.Component {
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
         
-        
+        <Text style={styles.h1}>{this.props.msg}</Text>
 
         <Grid>
-            <Col><Text style={styles.h1}>DashBoard</Text></Col>
-            <Col><Text style={styles.h1}>{this.props.msg}</Text></Col>
-            
+            <Col size={50}>
+              <Image
+                  source={require('./assets/compose.png')}
+                  style={styles.center}
+              />
+              <Text style={styles.dashItem}>Compose</Text>
+            </Col>
+            <Col size={50}>
+              <Image
+                  source={require('./assets/compose.png')}
+                  style={styles.center}
+              />
+              <Text style={styles.dashItem}>Friends</Text>
+            </Col>
+        </Grid>
+        <Grid>
+        <Col size={50}>
+          <Image
+              source={require('./assets/compose.png')}
+              style={styles.center}
+          />
+          <Text style={styles.dashItem}>People</Text>
+        </Col>
+        <Col size={50}>
+          <Image
+              source={require('./assets/compose.png')}
+              style={styles.center}
+          />
+          <Text style={styles.dashItem}>Posts</Text>
+        </Col>
+        </Grid>
+        <Grid>
+            <Row>
+              <Image
+                    source={require('./assets/compose.png')}
+                    style={styles.center}
+                />
+                <Text style={styles.dashItem}>Notifications</Text>
+            </Row>
+            <Row>
+              <Image
+                  source={require('./assets/compose.png')}
+                  style={styles.center}
+              />
+              <Text style={styles.dashItem}>Log Out</Text>
+            </Row>
         </Grid>
         
           
-        
-
       </KeyboardAvoidingView>
 
   

@@ -78,6 +78,12 @@ const styles = StyleSheet.create({
       paddingTop: 20,
       fontSize: 23,
       textDecorationLine: 'underline',
+    },
+    dashItem:{
+      textAlign: 'center',
+    },
+    center:{
+      alignSelf:'center'
     }
   });
   
