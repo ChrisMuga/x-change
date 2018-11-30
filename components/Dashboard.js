@@ -90,8 +90,9 @@ export default class Dashboard extends React.Component {
     return (
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
-        
-        <Text style={styles.h1}>{this.props.msg}</Text>
+        <View style={styles.dashHead}>
+          <Text style={styles.dashTitle}>Chris Muga {/**this.props.msg */}</Text>
+        </View>
 
         <Grid>
             <Col size={50}>
@@ -103,7 +104,7 @@ export default class Dashboard extends React.Component {
             </Col>
             <Col size={50}>
               <Image
-                  source={require('./assets/compose.png')}
+                  source={require('./assets/friends.png')}
                   style={styles.center}
               />
               <Text style={styles.dashItem}>Friends</Text>
@@ -112,34 +113,34 @@ export default class Dashboard extends React.Component {
         <Grid>
         <Col size={50}>
           <Image
-              source={require('./assets/compose.png')}
+              source={require('./assets/people.png')}
               style={styles.center}
           />
           <Text style={styles.dashItem}>People</Text>
         </Col>
         <Col size={50}>
           <Image
-              source={require('./assets/compose.png')}
+              source={require('./assets/posts.png')}
               style={styles.center}
           />
           <Text style={styles.dashItem}>Posts</Text>
         </Col>
         </Grid>
         <Grid>
-            <Row>
+            <Col>
               <Image
-                    source={require('./assets/compose.png')}
+                    source={require('./assets/bell.png')}
                     style={styles.center}
                 />
                 <Text style={styles.dashItem}>Notifications</Text>
-            </Row>
-            <Row>
+            </Col>
+            <Col>
               <Image
-                  source={require('./assets/compose.png')}
+                  source={require('./assets/logout.png')}
                   style={styles.center}
               />
               <Text style={styles.dashItem}>Log Out</Text>
-            </Row>
+            </Col>
         </Grid>
         
           

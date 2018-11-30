@@ -15,9 +15,9 @@ import {
 } 
 from 'react-native-router-flux';
 
-import SignIn from './SignIn';
-import Dashboard from './Dashboard';
-import styles from './Styles';
+import SignIn from './components/SignIn';
+import Dashboard from './components/Dashboard';
+import styles from './components/Styles';
 
 
 
@@ -99,7 +99,7 @@ class App extends React.Component {
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
         <Image
-          source={require('./assets/science.png')}
+          source={require('./components/assets/science.png')}
         />
         <Text       style={styles.h1}>Register</Text>
         <TextInput  style={styles.input} placeholder={"First Name"} name="first_name" onChangeText={(first_name) => this.setState({first_name}) }/>
@@ -141,6 +141,7 @@ const Routes = () =>(
 
   <Router>
   <Stack key="root">
+    {/* <Scene key="dashboard" component={Dashboard} title="Dashboard"/> */}
     <Scene key="register" component={App} title="Home"/>
     <Scene key="signin" component={SignIn} title="SignIn"/>
     <Scene key="dashboard" component={Dashboard} title="Dashboard"/>

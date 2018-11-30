@@ -84,6 +84,21 @@ const styles = StyleSheet.create({
     },
     center:{
       alignSelf:'center'
+    },
+    alwaysRight:{
+      alignSelf:'flex-end'
+    },
+    dashHead:{
+      width: '100%',
+      backgroundColor: '#FB6542',
+      paddingTop: 5,
+      paddingBottom: 5,
+      marginBottom: 18,
+
+    },
+    dashTitle:{
+      alignSelf: 'flex-end', 
+      fontSize: 16,
     }
   });
   
