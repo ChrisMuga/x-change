@@ -6,9 +6,11 @@ import {
   View, 
   Image, 
   TouchableOpacity, 
+  ToolbarAndroid,
   KeyboardAvoidingView,
 } 
 from 'react-native';
+import { Col, Row, Grid } from "react-native-easy-grid";
 
 import { 
   Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox 
@@ -88,8 +90,17 @@ export default class Dashboard extends React.Component {
     return (
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
-        <Text style={styles.h1}>DashBoard</Text>
-        <Text style={styles.h1}>{this.props.msg}</Text>
+        
+        
+
+        <Grid>
+            <Col><Text style={styles.h1}>DashBoard</Text></Col>
+            <Col><Text style={styles.h1}>{this.props.msg}</Text></Col>
+            
+        </Grid>
+        
+          
+        
 
       </KeyboardAvoidingView>
 
