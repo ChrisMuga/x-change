@@ -10,6 +10,11 @@ import {
 } 
 from 'react-native';
 
+import { 
+  Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox 
+} 
+from 'react-native-router-flux';
+
 import styles from './Styles';
 
 
@@ -67,6 +72,7 @@ export default class SignIn extends React.Component {
       {
         console.log(data.msg);
         Alert.alert("X-CHANGE",String(data.msg));
+        Actions.dashboard();
 
       }else if(data.code==0) //error
       {

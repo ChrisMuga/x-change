@@ -10,6 +10,11 @@ import {
 } 
 from 'react-native';
 
+import { 
+  Scene, Router, Actions, Reducer, ActionConst, Overlay, Tabs, Modal, Drawer, Stack, Lightbox 
+} 
+from 'react-native-router-flux';
+
 import {createStackNavigator,createAppContainer} from 'react-navigation';
 import SignIn from './SignIn';
 import Dashboard from './Dashboard';
@@ -85,8 +90,11 @@ class App extends React.Component {
     Alert.alert('Quit!')
   }
 
+ 
 
+  
   render() {
+    
     return (
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
@@ -134,7 +142,20 @@ const AppNavigator = createStackNavigator({
   Dashboard: Dashboard,
 });
 
-export default createAppContainer(AppNavigator);
+const Routes = () =>(
+
+  <Router>
+  <Stack key="root">
+    <Scene key="signin" component={SignIn} title="SignIn"/>
+    <Scene key="home" component={App} title="Home"/>
+    <Scene key="dashboard" component={Dashboard} title="Dashboard"/>
+  </Stack>
+</Router>
+);
+
+// export default createAppContainer(AppNavigator);
+
+export default Routes
 
 
 
