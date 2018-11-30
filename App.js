@@ -15,8 +15,13 @@ import {
 } 
 from 'react-native-router-flux';
 
+// actual components
 import SignIn from './components/SignIn';
 import Dashboard from './components/Dashboard';
+import Composer from './components/Composer';
+
+
+// style component
 import styles from './components/Styles';
 
 
@@ -141,10 +146,12 @@ const Routes = () =>(
 
   <Router>
   <Stack key="root">
-    {/* <Scene key="dashboard" component={Dashboard} title="Dashboard"/> */}
+    
+    <Scene key="dashboard" component={Dashboard} title="Dashboard"/>
     <Scene key="register" component={App} title="Home"/>
     <Scene key="signin" component={SignIn} title="SignIn"/>
     <Scene key="dashboard" component={Dashboard} title="Dashboard"/>
+    <Scene key="composer" component={Composer} title="Composer"/>
   </Stack>
 </Router>
 );
