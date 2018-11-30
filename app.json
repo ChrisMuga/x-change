@@ -8,9 +8,9 @@
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/science.png",
+    "icon": "./components/assets/science.png",
     "splash": {
-      "image": "./assets/jurica.png",
+      "image": "./components/assets/jurica.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },

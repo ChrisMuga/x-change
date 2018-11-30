@@ -91,7 +91,7 @@ export default class Dashboard extends React.Component {
    
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
         <View style={styles.dashHead}>
-          <Text style={styles.dashTitle}>Chris Muga {/**this.props.msg */}</Text>
+          <Text style={styles.dashTitle}>{this.props.user_name}</Text>
         </View>
 
         <Grid>

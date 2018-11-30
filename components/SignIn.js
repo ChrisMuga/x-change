@@ -70,9 +70,15 @@ export default class SignIn extends React.Component {
       //success
       if(data.code==1)
       {
-        console.log(data.msg);
+        console.log(data);
         Alert.alert("X-CHANGE",String(data.msg));
-        Actions.dashboard({msg: data.msg});
+        Actions.dashboard(
+          {
+            msg: data.msg, 
+            user_name: data.user_data.first_name+" "+data.user_data.last_name,
+            user_id:  data.user_data.id
+          }
+          );
 
       }else if(data.code==0) //error
       {
