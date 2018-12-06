@@ -15,6 +15,8 @@ import {
 } 
 from 'react-native-router-flux';
 
+import Config from './components/Config'
+
 // actual components
 import SignIn from './components/SignIn';
 import Dashboard from './components/Dashboard';
@@ -56,7 +58,7 @@ class App extends React.Component {
   post()
   {
     // post to api
-    fetch('http://192.168.1.102:8000/api/register', {
+    fetch(Config.host+':'+Config.port+'/api/register', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
@@ -115,7 +117,7 @@ class App extends React.Component {
         <View style={styles.full_view}>
           <TouchableOpacity  style={[styles.full_height, styles.btn, styles.btnprimary]} onPress={this.post}>
             <View style={styles.inline}>
-              <Text style={[styles.left, styles.font1]}>Sign Up</Text><Image source={require('./assets/right-arrow.png')} style={styles.right}/>
+              <Text style={[styles.left, styles.font1]}>Sign Up</Text><Image source={require('./components/assets/right-arrow.png')} style={styles.right}/>
             </View>
           </TouchableOpacity>
         </View>
@@ -125,7 +127,7 @@ class App extends React.Component {
         <View style={styles.full_view}>
           <TouchableOpacity  style={[styles.full_height, styles.btn, styles.btndanger]} onPress={this.quit}>
             <View style={styles.inline}>
-              <Text style={[styles.left, styles.font1]}>Quit</Text><Image source={require('./assets/quit.png')} style={styles.right}/>
+              <Text style={[styles.left, styles.font1]}>Quit</Text><Image source={require('./components/assets/quit.png')} style={styles.right}/>
             </View>
           </TouchableOpacity>
         </View>
@@ -147,7 +149,7 @@ const Routes = () =>(
   <Router>
   <Stack key="root">
     
-    <Scene key="dashboard" component={Dashboard} title="Dashboard"/>
+    {/* <Scene key="dashboard" component={Dashboard} title="Dashboard"/> */}
     <Scene key="register" component={App} title="Home"/>
     <Scene key="signin" component={SignIn} title="SignIn"/>
     <Scene key="dashboard" component={Dashboard} title="Dashboard"/>

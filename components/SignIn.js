@@ -50,7 +50,7 @@ export default class SignIn extends React.Component {
   post()
   {
     // post to api
-    fetch('http://192.168.1.102:8000/api/user-signin', {
+    fetch(Config.host+':'+Config.port+'/api/user-auth', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
